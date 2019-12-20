@@ -20,14 +20,19 @@ public class MainActivity extends AppCompatActivity {
     private Button popUpBtn,animatorBtn;
     private ConstraintLayout constraintLayout;
 
-
-
     private ConstraintSet constraintSet = new ConstraintSet();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Person bauti = new Person("Bauti", 19,423568334);
+        Student agus = new Student("Agus", 20 , 102948593 , "Cefe");
+
+        Toast.makeText(MainActivity.this,bauti.decimeKienSos(),Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,agus.decimeKienSos(),Toast.LENGTH_LONG).show();
+
         myDialog= new Dialog(this);
         popUpBtn = findViewById(R.id.popup_btn);
         constraintLayout = findViewById(R.id.constraint_layout);
