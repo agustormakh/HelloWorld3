@@ -11,6 +11,6 @@ public class Student extends Person{
 
     @Override
     public String decimeKienSos(){
-        return "voy al colegio " + this.colegio;
+        return super.decimeKienSos() +"voy al colegio " + this.colegio;
     }
 }
